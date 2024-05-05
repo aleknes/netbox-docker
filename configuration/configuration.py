@@ -300,8 +300,8 @@ RQ_DEFAULT_TIMEOUT = _environ_get_and_map('RQ_DEFAULT_TIMEOUT', 300, _AS_INT)
 
 # The name to use for the csrf token cookie.
 CSRF_COOKIE_NAME = environ.get('CSRF_COOKIE_NAME', 'csrftoken')
-CSRF_COOKIE_SECURE = False  # If using HTTPS
-SESSION_COOKIE_SECURE = False  # If using HTTPS
+CSRF_COOKIE_SECURE = True  # If using HTTPS
+SESSION_COOKIE_SECURE = True  # If using HTTPS
 
 # Cross-Site-Request-Forgery-Attack settings. If Netbox is sitting behind a reverse proxy, you might need to set the CSRF_TRUSTED_ORIGINS flag.
 # Django 4.0 requires to specify the URL Scheme in this setting. An example environment variable could be specified like:
@@ -309,6 +309,7 @@ SESSION_COOKIE_SECURE = False  # If using HTTPS
 CSRF_TRUSTED_ORIGINS = _environ_get_and_map('CSRF_TRUSTED_ORIGINS', '', _AS_LIST)
 CSRF_TRUSTED_ORIGINS.append('https://10.97.71.21:442')
 CSRF_TRUSTED_ORIGINS.append('localhost')
+CSRF_TRUSTED_ORIGINS.append('https://lab.lekn.es:442')
 # The name to use for the session cookie.
 SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME', 'sessionid')
 
