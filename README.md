@@ -10,7 +10,7 @@
 [The GitHub repository][netbox-docker-github] houses the components needed to build NetBox as a container.
 Images are built regularly using the code in that repository and are pushed to [Docker Hub][netbox-dockerhub], [Quay.io][netbox-quayio] and [GitHub Container Registry][netbox-ghcr].
 
-Do you have any questions?
+Do you have any questisons?
 Before opening an issue on Github,
 please join [our Slack][netbox-docker-slack] and ask for help in the [`#netbox-docker`][netbox-docker-slack-channel] channel.
 
