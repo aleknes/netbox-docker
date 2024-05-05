@@ -61,6 +61,7 @@ ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', '*').split(' ')
 # ensure that '*' or 'localhost' is always in ALLOWED_HOSTS (needed for health checks)
 if '*' not in ALLOWED_HOSTS and 'localhost' not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append('localhost')
+ALLOWED_HOSTS.append('*')
 
 
 
@@ -165,7 +166,7 @@ CORS_ORIGIN_REGEX_WHITELIST = [re.compile(r) for r in _environ_get_and_map('CORS
 # Set to True to enable server debugging. WARNING: Debugging introduces a substantial performance penalty and may reveal
 # sensitive information about your installation. Only enable debugging while performing testing.
 # Never enable debugging on a production system.
-DEBUG = _environ_get_and_map('DEBUG', 'False', _AS_BOOL)
+DEBUG = _environ_get_and_map('DEBUG', 'True', _AS_BOOL)
 
 # This parameter serves as a safeguard to prevent some potentially dangerous behavior,
 # such as generating new database schema migrations.
