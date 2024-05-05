@@ -1,0 +1,3 @@
+netbox-secrets
+ipfabric-netbox
+ipfabric_netbox
