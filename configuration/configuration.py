@@ -306,7 +306,7 @@ SESSION_COOKIE_SECURE = True  # If using HTTPS
 # Django 4.0 requires to specify the URL Scheme in this setting. An example environment variable could be specified like:
 # CSRF_TRUSTED_ORIGINS=https://demo.netbox.dev http://demo.netbox.dev
 CSRF_TRUSTED_ORIGINS = _environ_get_and_map('CSRF_TRUSTED_ORIGINS', '', _AS_LIST)
-
+CSRF_TRUSTED_ORIGINS.append('https://10.97.71.21:442')
 # The name to use for the session cookie.
 SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME', 'sessionid')
 

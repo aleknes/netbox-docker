@@ -7,7 +7,6 @@ services:
     # If you want the Nginx unit status page visible from the
     # outside of the container add the following port mapping:
       - "8001:8081"
-    env_file: env/netbox.env
     # healthcheck:
       # Time for which the health check can fail after the container is started.
       # This depends mostly on the performance of your database. On the first start,
